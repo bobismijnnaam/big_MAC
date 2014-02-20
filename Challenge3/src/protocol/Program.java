@@ -18,7 +18,7 @@ public class Program {
 
 	// Change to your group password (doesn't matter what it is,
 	// as long as everyone in the group uses the same string)
-	private static String password = "rubs";
+	private static String password = "rub";
 
 	// Change to your protocol implementation
 	private static IMACProtocol protocol = new SlottedAlohaSimplified();
