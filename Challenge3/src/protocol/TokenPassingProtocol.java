@@ -15,6 +15,19 @@ public class TokenPassingProtocol implements IMACProtocol {
 	private boolean initialize = true;
 	public boolean hasToken = false;
 	
+	int encode(boolean hasData, int clientID) {
+		int hasDataInt = hasData ? 1 : 0;
+		
+		return (clientID << 1) ^ hasDataInt;
+	}
+	
+	int[] decode(int msg) {
+		int hasDataInt = msg & 1;
+		int id = msg >> 1;
+		
+		return new int[]{hasDataInt, id};
+	}
+	
 	@Override
 	public TransmissionInfo TimeslotAvailable(MediumState previousMediumState,
 			int controlInformation, int localQueueLength) {
