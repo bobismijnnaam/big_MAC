@@ -14,14 +14,14 @@ import client.*;
 public class Program {
 
 	// Change to your group number (use a student number)
-	private static int groupId = 1499599;
+	private static int groupId = 1443534; // 1499599
 
 	// Change to your group password (doesn't matter what it is,
 	// as long as everyone in the group uses the same string)
 	private static String password = "rub";
 
 	// Change to your protocol implementation
-	private static IMACProtocol protocol = new SlottedAlohaProtocol();
+	private static IMACProtocol protocol = new BigMACProtocol();
 
 	// Challenge server address
 	private static String serverAddress = "dacs-stud03.ewi.utwente.nl";
