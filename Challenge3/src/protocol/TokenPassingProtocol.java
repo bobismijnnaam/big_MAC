@@ -14,6 +14,7 @@ public class TokenPassingProtocol implements IMACProtocol {
 	private boolean hasSend = false;
 	private boolean initialize = true;
 	public boolean hasToken = false;
+	public int[] toSkip; 
 	
 	@Override
 	public TransmissionInfo TimeslotAvailable(MediumState previousMediumState,
